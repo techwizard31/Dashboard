@@ -5,15 +5,15 @@ import Image from "next/image";
 function Sidebar() {
 
   return (
-    <div className="flex flex-col gap-5 bg-slate-100 w-[30%] h-screen lg:p-5 lg:max-w-[260px]">
-      <div className="flex flex-row items-center gap-3 p-2">
-        <Image src={Logo} className="w-12 h-12" />
-        <p className="font-poppins text-primary text-3xl font-medium">
+    <div className="flex flex-col gap-5 bg-slate-100 lg:w-[30%] h-screen lg:p-5 lg:max-w-[260px] sm:w-20 sm:pt-5">
+      <div className="flex flex-row items-center gap-3 p-2 justify-center lg:-translate-x-2">
+        <Image src={Logo} className="lg:w-10 lg:h-10 sm:w-8 sm:h-8" />
+        <p className="font-poppins text-primary text-3xl font-medium sm:hidden lg:block">
           VASITUM
         </p>
       </div>
-      <div className="flex flex-col w-full gap-2 h-3/5 items-start justify-around pl-2">
-        <p className="font-poppins font-light text-gray-400">MAIN MENU</p>
+      <div className="flex flex-col w-full gap-2 h-3/5 lg:items-start sm:items-center justify-around lg:pl-2">
+        <p className="font-poppins font-light text-gray-400 sm:text-xs lg:text-base whitespace-nowrap">MAIN MENU</p>
         <div className="flex flex-row gap-2 cursor-pointer group transition-all duration-150 ease-in-out hover:scale-105">
           <div className="group w-6 h-6">
             <svg
@@ -27,7 +27,7 @@ function Sidebar() {
               <path d="M3 13H11V3H3V13ZM3 21H11V15H3V21ZM13 21H21V11H13V21ZM13 3V9H21V3H13Z" />
             </svg>
           </div>
-          <p className="font-poppins text-base group-hover:text-selected">
+          <p className="font-poppins text-base group-hover:text-selected sm:hidden lg:block">
             Dashboard
           </p>
         </div>
@@ -43,7 +43,6 @@ function Sidebar() {
             >
               <path
                 d="M5 8C5 8.79112 5.2346 9.56448 5.67412 10.2223C6.11365 10.8801 6.73836 11.3928 7.46927 11.6955C8.20017 11.9983 9.00444 12.0775 9.78036 11.9231C10.5563 11.7688 11.269 11.3878 11.8284 10.8284C12.3878 10.269 12.7688 9.55628 12.9231 8.78036C13.0775 8.00444 12.9983 7.20017 12.6955 6.46927C12.3928 5.73836 11.8801 5.11365 11.2223 4.67412C10.5645 4.2346 9.79112 4 9 4C7.93913 4 6.92172 4.42143 6.17157 5.17157C5.42143 5.92172 5 6.93913 5 8Z"
-                // fill="#B2B2B2"
               />
               <rect x="3" y="14" width="12" height="6" rx="3" />
               <path
@@ -53,7 +52,7 @@ function Sidebar() {
               />
             </svg>
           </div>
-          <p className="font-poppins text-base group-hover:text-selected">
+          <p className="font-poppins text-base group-hover:text-selected sm:hidden lg:block">
             Recruitment
           </p>
         </div>
@@ -70,7 +69,7 @@ function Sidebar() {
               <path d="M18.2222 4.8H16.4444V3H14.6667V4.8H9.33333V3H7.55556V4.8H5.77778C4.79733 4.8 4 5.6073 4 6.6V19.2C4 20.1927 4.79733 21 5.77778 21H18.2222C19.2027 21 20 20.1927 20 19.2V6.6C20 5.6073 19.2027 4.8 18.2222 4.8ZM17.3333 18.3H12V12.9H17.3333V18.3ZM18.2222 9.3H5.77778V7.5H18.2222V9.3Z" />
             </svg>
           </div>
-          <p className="font-poppins text-base group-hover:text-selected">
+          <p className="font-poppins text-base group-hover:text-selected sm:hidden lg:block">
             Schedule
           </p>
         </div>
@@ -92,7 +91,7 @@ function Sidebar() {
               <rect x="6" y="11" width="8" height="7" rx="3" />
             </svg>
           </div>
-          <p className="font-poppins text-base group-hover:text-selected">
+          <p className="font-poppins text-base group-hover:text-selected sm:hidden lg:block">
             Employee
           </p>
         </div>
@@ -109,11 +108,11 @@ function Sidebar() {
               <path d="M12 3C7.032 3 3 7.032 3 12C3 16.968 7.032 21 12 21C16.968 21 21 16.968 21 12C21 7.032 16.968 3 12 3ZM8.4 16.95C7.80326 16.95 7.23097 16.7129 6.80901 16.291C6.38705 15.869 6.15 15.2967 6.15 14.7C6.15 14.1033 6.38705 13.531 6.80901 13.109C7.23097 12.6871 7.80326 12.45 8.4 12.45C8.99674 12.45 9.56903 12.6871 9.99099 13.109C10.4129 13.531 10.65 14.1033 10.65 14.7C10.65 15.2967 10.4129 15.869 9.99099 16.291C9.56903 16.7129 8.99674 16.95 8.4 16.95ZM9.75 8.4C9.75 7.80326 9.98705 7.23097 10.409 6.80901C10.831 6.38705 11.4033 6.15 12 6.15C12.5967 6.15 13.169 6.38705 13.591 6.80901C14.0129 7.23097 14.25 7.80326 14.25 8.4C14.25 8.99674 14.0129 9.56903 13.591 9.99099C13.169 10.4129 12.5967 10.65 12 10.65C11.4033 10.65 10.831 10.4129 10.409 9.99099C9.98705 9.56903 9.75 8.99674 9.75 8.4ZM15.6 16.95C15.0033 16.95 14.431 16.7129 14.009 16.291C13.5871 15.869 13.35 15.2967 13.35 14.7C13.35 14.1033 13.5871 13.531 14.009 13.109C14.431 12.6871 15.0033 12.45 15.6 12.45C16.1967 12.45 16.769 12.6871 17.191 13.109C17.6129 13.531 17.85 14.1033 17.85 14.7C17.85 15.2967 17.6129 15.869 17.191 16.291C16.769 16.7129 16.1967 16.95 15.6 16.95Z" />
             </svg>
           </div>
-          <p className="font-poppins text-base group-hover:text-selected">
+          <p className="font-poppins text-base group-hover:text-selected sm:hidden lg:block">
             Department
           </p>
         </div>
-        <p className="font-poppins font-light text-gray-400">OTHER</p>
+        <p className="font-poppins font-light text-gray-400 sm:text-xs lg:text-base whitespace-nowrap">OTHER</p>
         <div className="flex flex-row gap-2 cursor-pointer group transition-all duration-150 ease-in-out hover:scale-105">
           <div className="group w-6 h-6">
             <svg
@@ -127,7 +126,7 @@ function Sidebar() {
               <path d="M12 3C7.0374 3 3 7.0374 3 12V15.7287C3 16.6503 3.8073 17.4 4.8 17.4H5.7C5.93869 17.4 6.16761 17.3052 6.3364 17.1364C6.50518 16.9676 6.6 16.7387 6.6 16.5V11.8713C6.6 11.6326 6.50518 11.4037 6.3364 11.2349C6.16761 11.0661 5.93869 10.9713 5.7 10.9713H4.8828C5.3832 7.4883 8.3802 4.8 12 4.8C15.6198 4.8 18.6168 7.4883 19.1172 10.9713H18.3C18.0613 10.9713 17.8324 11.0661 17.6636 11.2349C17.4948 11.4037 17.4 11.6326 17.4 11.8713V17.4C17.4 18.3927 16.5927 19.2 15.6 19.2H13.8V18.3H10.2V21H15.6C17.5854 21 19.2 19.3854 19.2 17.4C20.1927 17.4 21 16.6503 21 15.7287V12C21 7.0374 16.9626 3 12 3Z" />
             </svg>
           </div>
-          <p className="font-poppins text-base group-hover:text-selected">
+          <p className="font-poppins text-base group-hover:text-selected sm:hidden lg:block">
             Support
           </p>
         </div>
@@ -144,7 +143,7 @@ function Sidebar() {
               <path d="M13.3703 20H10.0943C9.88901 20 9.6899 19.9299 9.52997 19.8012C9.37004 19.6726 9.25889 19.4931 9.21497 19.2926L8.84867 17.597C8.36002 17.3829 7.89668 17.1151 7.46717 16.7987L5.81387 17.3252C5.61818 17.3876 5.40702 17.3812 5.21548 17.307C5.02393 17.2329 4.86351 17.0954 4.76087 16.9175L3.11927 14.0816C3.0177 13.9035 2.97957 13.6962 3.01113 13.4937C3.04268 13.2911 3.14205 13.1052 3.29297 12.9665L4.57547 11.7965C4.51715 11.2665 4.51715 10.7317 4.57547 10.2017L3.29297 9.0344C3.14183 8.8956 3.04233 8.70957 3.01077 8.5068C2.97921 8.30404 3.01747 8.09657 3.11927 7.9184L4.75727 5.0807C4.85991 4.90278 5.02033 4.76533 5.21188 4.69117C5.40342 4.61701 5.61458 4.61059 5.81027 4.673L7.46357 5.1995C7.68317 5.0375 7.91177 4.8863 8.14757 4.7495C8.37527 4.6217 8.60927 4.5056 8.84867 4.4021L9.21587 2.7083C9.25958 2.50778 9.37052 2.32822 9.53028 2.19939C9.69004 2.07057 9.88904 2.00022 10.0943 2H13.3703C13.5755 2.00022 13.7745 2.07057 13.9343 2.19939C14.094 2.32822 14.205 2.50778 14.2487 2.7083L14.6195 4.403C14.8715 4.5146 15.1181 4.6397 15.3566 4.7792C15.5789 4.9079 15.794 5.0492 16.001 5.2013L17.6552 4.6748C17.8507 4.61262 18.0617 4.61915 18.253 4.6933C18.4444 4.76746 18.6047 4.90478 18.7073 5.0825L20.3453 7.9202C20.5541 8.2865 20.4821 8.75 20.1716 9.0353L18.8891 10.2053C18.9474 10.7353 18.9474 11.2701 18.8891 11.8001L20.1716 12.9701C20.4821 13.2563 20.5541 13.7189 20.3453 14.0852L18.7073 16.9229C18.6046 17.1008 18.4442 17.2383 18.2527 17.3124C18.0611 17.3866 17.85 17.393 17.6543 17.3306L16.001 16.8041C15.5718 17.1203 15.1087 17.3878 14.6204 17.6015L14.2487 19.2926C14.2048 19.493 14.0938 19.6723 13.934 19.801C13.7743 19.9296 13.5754 19.9998 13.3703 20ZM11.7287 7.4C10.7739 7.4 9.85822 7.77928 9.18308 8.45442C8.50795 9.12955 8.12867 10.0452 8.12867 11C8.12867 11.9548 8.50795 12.8705 9.18308 13.5456C9.85822 14.2207 10.7739 14.6 11.7287 14.6C12.6834 14.6 13.5991 14.2207 14.2743 13.5456C14.9494 12.8705 15.3287 11.9548 15.3287 11C15.3287 10.0452 14.9494 9.12955 14.2743 8.45442C13.5991 7.77928 12.6834 7.4 11.7287 7.4Z" />
             </svg>
           </div>
-          <p className="font-poppins text-base group-hover:text-selected">
+          <p className="font-poppins text-base group-hover:text-selected sm:hidden lg:block">
             Settings
           </p>
         </div>

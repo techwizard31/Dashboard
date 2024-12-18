@@ -16,11 +16,6 @@ export default {
       fontFamily:{
         poppins: ["Poppins"]
       },
-      screens:{
-        tablet: {
-          raw: "screen and (min-width: 500px)",
-        },
-      }
     },
   },
   plugins: [],
