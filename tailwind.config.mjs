@@ -10,7 +10,17 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: "#0A337A",
+        selected: "#FF5151"
       },
+      fontFamily:{
+        poppins: ["Poppins"]
+      },
+      screens:{
+        tablet: {
+          raw: "screen and (min-width: 500px)",
+        },
+      }
     },
   },
   plugins: [],
