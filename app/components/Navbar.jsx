@@ -15,24 +15,24 @@ function Navbar() {
   return (
     <div className="flex flex-row p-4 w-full justify-between lg:px-10 sm:px-6 items-center">
       <div className="flex flex-row w-[20%] relative items-center min-w-[300px] gap-4">
-      <div
-        className="flex flex-col lg:hidden gap-1 w-9"
-        onClick={() => setOpen(!open)}
-      >
         <div
-          className={`h-[0.2rem] w-7 bg-gray-400 ${
-            open ? "rotate-45 translate-y-0" : ""
-          }`}
-        />
-        <div
-          className={`h-[0.2rem] w-7 bg-gray-400 ${
-            open ? "-rotate-45 -translate-y-[0.388rem]" : ""
-          }`}
-        />
-        <div
-          className={`h-[0.2rem] w-7 bg-gray-400 ${open ? "hidden" : ""}`}
-        />
-      </div>
+          className="flex flex-col lg:hidden gap-1 w-9"
+          onClick={() => setOpen(!open)}
+        >
+          <div
+            className={`h-[0.2rem] w-7 bg-gray-400 ${
+              open ? "rotate-45 translate-y-0" : ""
+            }`}
+          />
+          <div
+            className={`h-[0.2rem] w-7 bg-gray-400 ${
+              open ? "-rotate-45 -translate-y-[0.388rem]" : ""
+            }`}
+          />
+          <div
+            className={`h-[0.2rem] w-7 bg-gray-400 ${open ? "hidden" : ""}`}
+          />
+        </div>
         <input
           type="text"
           name="Search"
@@ -43,10 +43,14 @@ function Navbar() {
         <FiSearch className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-6 h-6" />
       </div>
       <div className="flex flex-row lg:gap-8 sm:gap-4 items-center">
-        <Image src={Notification} className="w-8 h-8 cursor-pointer" />
-        <Image src={Messages} className="w-8 h-8 cursor-pointer" />
+        <div className="p-1 hover:bg-slate-200/60 rounded-full transition-all duration-150">
+          <Image src={Notification} className="w-8 h-8 cursor-pointer" />
+        </div>
+        <div className="p-1 hover:bg-slate-200/60 rounded-full transition-all duration-150">
+          <Image src={Messages} className="w-8 h-8 cursor-pointer" />
+        </div>
         <div
-          className="flex flex-row items-center gap-2 cursor-pointer"
+          className="flex flex-row items-center gap-2 cursor-pointer p-[0.4rem] hover:bg-slate-200/60 rounded-md transition-all duration-150"
           onClick={() => setIsOpen(!isOpen)}
         >
           <img

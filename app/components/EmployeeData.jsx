@@ -210,9 +210,9 @@ function EmployeeData() {
           </div>
         </div>
         <div className="flex flex-col gap-2 w-full mt-2 items-center h-28 overflow-y-scroll scroll-smooth scrollbar-hide">
-          {messages.map((message) => {
+          {messages.map((message,index) => {
             return (
-              <div className="flex flex-row justify-between items-center w-[95%] bg-slate-50 p-3 rounded-md hover:scale-105 cursor-pointer transition-all duration-150 ease-in-out">
+              <div className="flex flex-row justify-between items-center w-[95%] bg-slate-50 p-3 rounded-md hover:scale-105 cursor-pointer transition-all duration-150 ease-in-out" key={index}>
                 <div className="flex flex-col gap-2">
                   <p className="text-lg font-poppins">{message.subject}</p>
                   <p className="text-sm text-stone-300 font-poppins">
