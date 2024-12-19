@@ -1,1 +1,3 @@
 export const userdata = {"image":"https://img.freepik.com/free-photo/smiley-man-holding-camera-front-view_23-2149915895.jpg", "FirstName":"Istaprasad", "LastName":"Patra" }
+
+export const messages = [{"subject":"Outing schedule for every department","time":"5 Minutes ago"},{"subject":"Meeting HR Department","time":"Yesterday, 12:30 PM"},{"subject":"IT Department need two more talents for UI/UX Designer position","time":"Yesterdat, 9:15 AM"}]

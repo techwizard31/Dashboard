@@ -4,6 +4,7 @@ import ReactApexChart from "react-apexcharts";
 import { useState, useEffect } from "react";
 import { BsFillPinAngleFill } from "react-icons/bs";
 import { HiDotsHorizontal } from "react-icons/hi";
+import { messages } from "../data";
 
 function EmployeeData() {
   const [selectedDate, setSelectedDate] = useState(
@@ -88,7 +89,7 @@ function EmployeeData() {
   return (
     <div className="lg:w-2/3 sm:w-full flex flex-col gap-4 mt-2">
       <div className="w-full flex flex-row gap-2">
-        <div className="w-[30%] h-36 bg-[#FFEFE7] rounded-xl flex flex-col justify-center items-start gap-3 xl:p-4 sm:p-4 lg:p-3 xl:min-w-48 lg:min-w-40 sm:min-w-48">
+        <div className="w-[33%] h-36 bg-[#FFEFE7] rounded-xl flex flex-col justify-center items-start gap-3 xl:p-4 sm:p-4 lg:p-3 xl:min-w-48 lg:min-w-40 sm:min-w-48">
           <p className="xl:text-lg sm:text-lg lg:text-base font-poppins font-medium whitespace-nowrap">
             Available Position
           </p>
@@ -99,7 +100,7 @@ function EmployeeData() {
             4 Urgently needed
           </p>
         </div>
-        <div className="w-[30%] h-36 bg-[#E8F0FB] rounded-xl flex flex-col justify-center items-start gap-3 xl:p-4 sm:p-4 lg:p-3 xl:min-w-48 lg:min-w-40 sm:min-w-48">
+        <div className="w-[33%] h-36 bg-[#E8F0FB] rounded-xl flex flex-col justify-center items-start gap-3 xl:p-4 sm:p-4 lg:p-3 xl:min-w-48 lg:min-w-40 sm:min-w-48">
           <p className="xl:text-lg sm:text-lg lg:text-base font-poppins font-medium whitespace-nowrap">
             Job Open
           </p>
@@ -110,7 +111,7 @@ function EmployeeData() {
             4 Actively hiring
           </p>
         </div>
-        <div className="w-[30%] h-36 bg-[#FDEBF9] rounded-xl flex flex-col justify-center items-start gap-3 xl:p-4 sm:p-4 lg:p-3 xl:min-w-48 lg:min-w-40 sm:min-w-48">
+        <div className="w-[33%] h-36 bg-[#FDEBF9] rounded-xl flex flex-col justify-center items-start gap-3 xl:p-4 sm:p-4 lg:p-3 xl:min-w-48 lg:min-w-40 sm:min-w-48">
           <p className="xl:text-lg sm:text-lg lg:text-base font-poppins font-medium whitespace-nowrap">
             New Employees
           </p>
@@ -122,13 +123,13 @@ function EmployeeData() {
           </p>
         </div>
       </div>
-      <div className="w-full flex flex-row gap-4">
-        <div className="w-[45%] h-40 flex flex-row p-4 bg-[#FFFFFF] border-2 border-[#E0E0E0] rounded-xl">
+      <div className="w-full flex flex-row xl:gap-4 lg:gap-2 sm:gap-4">
+        <div className="w-[49%] h-40 flex flex-row xl:p-4 lg:p-2 sm:p-4 bg-[#FFFFFF] border-2 border-[#E0E0E0] rounded-xl xl:min-w-[315px] lg:min-w-[240px]">
           <div className="flex flex-col w-1/2 justify-start">
             <p className="xl:text-lg sm:text-lg lg:text-base font-poppins font-medium whitespace-nowrap">
               Total Employees
             </p>
-            <p className="xl:text-4xl sm:text-4xl lg:text-3xl font-poppins font-semibold pt-2">
+            <p className="xl:text-4xl sm:text-4xl lg:text-2xl font-poppins font-semibold pt-2">
               216
             </p>
             <p className="text-gray-400 font-poppins font-light text-sm pt-4">
@@ -138,25 +139,27 @@ function EmployeeData() {
               96 Women
             </p>
           </div>
-          <div className="flex flex-col w-1/2 -translate-y-2">
-            <ReactApexChart
-              options={options}
-              series={series}
-              type="area"
-              height="auto"
-              width={160}
-            />
+          <div className="flex flex-col w-1/2 -translate-y-2 lg:-translate-x-2 xl:translate-x-0 sm:translate-x-0 justify-center items-center">
+            <div className="xl:w-[160px] lg:w-[135px] sm:w-[160px]">
+              <ReactApexChart
+                options={options}
+                series={series}
+                type="area"
+                height="auto"
+                width="100%"
+              />
+            </div>
             <div className="whitespace-nowrap bg-[#FFEFE7] w-max font-poppins p-1 text-xs mx-auto rounded-md px-2">
               +2% Past month
             </div>
           </div>
         </div>
-        <div className="w-[45%] h-40 flex flex-row p-4 bg-[#FFFFFF] border-2 border-[#E0E0E0] rounded-xl">
+        <div className="w-[49%] h-40 flex flex-row xl:p-4 lg:p-2 sm:p-4 bg-[#FFFFFF] border-2 border-[#E0E0E0] rounded-xl xl:min-w-[315px] lg:min-w-[240px]">
           <div className="flex flex-col w-1/2 justify-start">
             <p className="xl:text-lg sm:text-lg lg:text-base font-poppins font-medium whitespace-nowrap">
               Talent Request
             </p>
-            <p className="xl:text-4xl sm:text-4xl lg:text-3xl font-poppins font-semibold pt-2">
+            <p className="xl:text-4xl sm:text-4xl lg:text-2xl font-poppins font-semibold pt-2">
               16
             </p>
             <p className="text-gray-400 font-poppins font-light text-sm pt-4">
@@ -166,29 +169,37 @@ function EmployeeData() {
               10 Women
             </p>
           </div>
-          <div className="flex flex-col w-1/2 -translate-y-2">
-            <ReactApexChart
-              options={options}
-              series={series}
-              type="area"
-              height="auto"
-              width={160}
-            />
+          <div className="flex flex-col w-1/2 -translate-y-2 lg:-translate-x-2 xl:translate-x-0 sm:translate-x-0 justify-center items-center">
+          <div className="xl:w-[160px] lg:w-[135px] sm:w-[160px]">
+              <ReactApexChart
+                options={options}
+                series={series}
+                type="area"
+                height="auto"
+                width="100%"
+              />
+            </div>
             <div className="whitespace-nowrap bg-[#FFEFE7] w-max font-poppins p-1 text-xs mx-auto rounded-md px-2">
               +5% Past month
             </div>
           </div>
         </div>
       </div>
-      <div className="flex w-full flex-col pt-2 pl-2 pr-2 justify-center items-center mt-2">
+      <div className="flex w-full flex-col pt-4 pl-4 pr-4 justify-center items-center bg-[#FFFFFF] border-2 border-[#E0E0E0] rounded-xl">
         <div className="flex w-full flex-row items-center justify-between">
-          <p>Announcement</p>
-          <div>
-            <label htmlFor="date-select">Date:</label>
+          <p className="font-poppins text-lg font-medium">Announcement</p>
+          <div className="bg-slate-50 p-1 rounded-md">
+            <label
+              htmlFor="date-select"
+              className="font-poppins text-base font-normal"
+            >
+              Date:
+            </label>
             <select
               id="date-select"
               value={selectedDate}
               onChange={handleDateChange}
+              className="bg-slate-50"
             >
               {dateOptions.map((option) => (
                 <option key={option.value} value={option.value}>
@@ -198,17 +209,28 @@ function EmployeeData() {
             </select>
           </div>
         </div>
-        <div className="flex flex-col gap-2 w-full">
-           <div className="flex flex-row justify-between items-center">
-             <div className="flex flex-col gap-2">
-                <p>Outing schedule for every department</p>
-                <p>5 Minutes ago</p>
-             </div>
-             <div className="flex flex-row gap-4 items-center justify-center">
-             <BsFillPinAngleFill className="w-6 h-6 text-gray-400 cursor-pointer hover:text-gray-600" />
-             <HiDotsHorizontal className="w-6 h-6 text-gray-400 hover:text-black cursor-pointer" />
-             </div>
-           </div>
+        <div className="flex flex-col gap-2 w-full mt-2 items-center h-28 overflow-y-scroll scroll-smooth scrollbar-hide">
+          {messages.map((message) => {
+            return (
+              <div className="flex flex-row justify-between items-center w-[95%] bg-slate-50 p-3 rounded-md hover:scale-105 cursor-pointer transition-all duration-150 ease-in-out">
+                <div className="flex flex-col gap-2">
+                  <p className="text-lg font-poppins">{message.subject}</p>
+                  <p className="text-sm text-stone-300 font-poppins">
+                    {message.time}
+                  </p>
+                </div>
+                <div className="flex flex-row gap-4 items-center justify-center">
+                  <BsFillPinAngleFill className="w-6 h-6 text-gray-400 cursor-pointer hover:text-gray-600" />
+                  <HiDotsHorizontal className="w-6 h-6 text-gray-400 hover:text-black cursor-pointer" />
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        <div className="flex justify-center items-center py-2 border-t-2 border-gray-300 mt-2 w-full">
+          <p className="text-base font-poppins font-medium text-[#FF5151]">
+            See All Announcement
+          </p>
         </div>
       </div>
     </div>
