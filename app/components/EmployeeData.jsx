@@ -1,16 +1,19 @@
 "use client";
 import React from "react";
-import ReactApexChart from "react-apexcharts";
 import { useState, useEffect } from "react";
 import { BsFillPinAngleFill } from "react-icons/bs";
 import { HiDotsHorizontal } from "react-icons/hi";
 import { messages } from "../data";
+import dynamic from 'next/dynamic'
 
 function EmployeeData() {
   const [selectedDate, setSelectedDate] = useState(
     new Date().toISOString().slice(0, 10)
   );
   const [dateOptions, setDateOptions] = useState([]);
+  const ReactApexChart = dynamic(() => import('react-apexcharts'), {
+    ssr: false,
+  });
 
   function populateDateOptions() {
     const today = new Date();

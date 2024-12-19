@@ -2,7 +2,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { HiDotsHorizontal } from "react-icons/hi";
-import { messages,recentactivity,priorityschedules,otherschedules } from "../data";
+import { recentactivity,priorityschedules,otherschedules } from "../data";
 
 function Updates() {
   const [selectedDate, setSelectedDate] = useState(
